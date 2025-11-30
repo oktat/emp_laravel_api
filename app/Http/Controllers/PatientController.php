@@ -9,7 +9,7 @@ use App\Models\Patient;
 class PatientController extends Controller
 {
     public function index() {
-        $patients = Patient::select("id", "name", "birthDate", "socialNumber", "phone")->get();
+        $patients = Patient::all();
 
         return response()->json([
             'success' => true,
